@@ -5,7 +5,7 @@ export const Header = () =>{
     // const x =1;
 
     return (
-    <header clasName="header" data-testid="header">
+    <header className="header" data-testid="header">
         <nav>
             <div className="logo">
                 <img src="/images/logo.png" alt="Todolist"></img>
