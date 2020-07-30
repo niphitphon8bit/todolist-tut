@@ -12,7 +12,7 @@ export const Tasks = () => {
             <h2 data-test="project-name">
                 {project_name}
             </h2>
-            <ul className="tasks_list">
+            <ul className="tasks__list">
                 {tasks.map(task => (
                     <li key={`${task.id}`}>
                         <Checkbox id="{task.id}" />
