@@ -423,9 +423,10 @@ header {
      ============================================ */
 .project-delete-modal {
   position: relative;
-
+  // margin-right: 100px;
   &__inner {
     @include box-overlay();
+    // margin-right: 200px;
     z-index: 99;
     width: 200px;
     padding: 10px;
