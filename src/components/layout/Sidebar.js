@@ -5,7 +5,7 @@ export const Sidebar = () => (<div className="sidebar" data-testid="sidebar">
     <ul className="sidebar__generic">
         <li data-testid="inbox" className="inbox">
             <span>
-                <FaInbox/>
+                <FaInbox />
             </span>
             <span>
                 Inbox
@@ -13,7 +13,7 @@ export const Sidebar = () => (<div className="sidebar" data-testid="sidebar">
         </li>
         <li data-testid="today" className="today">
             <span>
-                <FaRegCalendar/>
+                <FaRegCalendar />
             </span>
             <span>
                 Tody
@@ -21,7 +21,7 @@ export const Sidebar = () => (<div className="sidebar" data-testid="sidebar">
         </li>
         <li data-testid="next_7" className="next_7">
             <span>
-                <FaRegCalendarAlt/>
+                <FaRegCalendarAlt />
             </span>
             <span>
                 Next 7 days
@@ -29,10 +29,10 @@ export const Sidebar = () => (<div className="sidebar" data-testid="sidebar">
         </li>
     </ul>
     <div className="sidebar__middle">
-         <span>
-             <FaChevronDown/>
-         </span>
-         <h2>Projects</h2>
+        <span>
+            <FaChevronDown />
+        </span>
+        <h2>Projects</h2>
     </div>
     <ul className="sidebar__projects">Projects will be here!</ul>
     Add Project Component Here!!
