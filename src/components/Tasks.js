@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Checkbox } from '../components/Checkbox'
+import { AddTask } from './AddTask';
 import { useTasks } from '../hooks';
 import { collatedTasks } from '../constants';
 import { getTitle, getCollatedTitle, collatedTasksExist } from '../helpers';
@@ -31,7 +32,7 @@ export const Tasks = () => {
     return (
         <div className="tasks" data-testid="tasks">
             <h2 data-test="project-name">
-                 {projectName}
+                {projectName}
             </h2>
             <ul className="tasks__list">
                 {tasks.map(task => (
@@ -41,6 +42,8 @@ export const Tasks = () => {
                     </li>
                 ))}
             </ul>
+
+            <AddTask />
         </div>
-    )
-}
+    );
+};
