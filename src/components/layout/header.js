@@ -13,7 +13,7 @@ export const Header = () =>{
             <div className="settings">
                 <ul>
                     <li data-testid="quick-add-task-action" className="settings__add">+</li>
-                    <li data-testid="dark-mode-acion" className="Settings__darkmode">
+                    <li data-testid="dark-mode-acion" className="settings__darkmode">
                         <FaPizzaSlice/>
                     </li>
                 </ul>
