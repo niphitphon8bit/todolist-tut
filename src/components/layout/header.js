@@ -5,10 +5,10 @@ export const Header = ({
     darkMode,
     setDarkMode
 }) => {
-    // const x =1;
+    
     const [shouldShowMain, setShouldShowMain] = useState(false);
     const [showQuickAddTask, setShowQuickAddTask] = useState(false);
-
+    
     return (
         <header className="header" data-testid="header">
             <nav>
