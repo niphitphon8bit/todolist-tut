@@ -11,6 +11,7 @@ export const useTasks = selectedProject => {
     // dogs, setDogs
 
     useEffect(() => {
+
         let unsubscribe = firebase
             .firestore()
             .collection('tasks')
@@ -23,7 +24,7 @@ export const useTasks = selectedProject => {
                     ? (unsubscribe = unsubscribe.where(
                         'date',
                         '==',
-                        moment().format('DD/MM/YYY')
+                        moment().format('DD/MM/YYYY')
                     ))
                     : selectedProject === 'INBOX' || selectedProject === 0
                         ? (unsubscribe = unsubscribe.where('date', '==', ''))
