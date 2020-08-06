@@ -14,7 +14,6 @@ export const Sidebar = () => {
     const [active, setActive] = useState('inbox');
     const [showProjects, setshowProjects] = useState(true);
 
-    console.log(showProjects);
 
     return (
         <div className="sidebar" data-testid="sidebar">
