@@ -6,13 +6,11 @@ export const Projects = ({ activeValue = null }) => {
     const { setSelectedProject } = useSelectedProjectValue();
     const { projects } = useProjectsValue();
 
-    // console.log(projects)
-    // console.log("hello")
-    return (
+     return (
         projects &&
         projects.map(project => (
             <li
-                key={project.project_id}
+                key={project.projectId}
                 data-doc-id={project.docId}
                 data-testid="project-action"
                 className={

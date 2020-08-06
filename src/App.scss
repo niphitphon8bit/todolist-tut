@@ -41,7 +41,7 @@ $generic-bg: #db4c3f;
      ============================================ */
 @mixin box-overlay() {
   -webkit-box-shadow: $generic-box-shadow;
-  box-shadow: $generic-box-shadow;
+          box-shadow: $generic-box-shadow;
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -426,7 +426,7 @@ header {
   // margin-right: 100px;
   &__inner {
     @include box-overlay();
-    // margin-right: 200px;
+    margin-right: 200px;
     z-index: 99;
     width: 200px;
     padding: 10px;
