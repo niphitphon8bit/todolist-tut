@@ -15,7 +15,7 @@ export const Tasks = () => {
 
     let projectName = '';
 
-    if (projects && selectedProject && !collatedTasksExist(selectedProject)) {
+    if (projects.length > 0 && selectedProject && !collatedTasksExist(selectedProject)) {
         projectName = getTitle(projects, selectedProject).name;
     }
 
@@ -25,7 +25,7 @@ export const Tasks = () => {
 
     useEffect(() => {
         document.title = `${projectName}: Todo list`;
-    })
+    }, [projectName])
 
     return (
         <div className="tasks" data-testid="tasks">
@@ -33,9 +33,9 @@ export const Tasks = () => {
                 {projectName}
             </h2>
             <ul className="tasks__list">
-                {tasks.map(task => (
+                {tasks.length !== 0 && tasks.map(task => (
                     <li key={`${task.id}`}>
-                        <Checkbox id="{task.id}" />
+                        <Checkbox id={task.id} />
                         <span>{task.task}</span>
                     </li>
                 ))}
