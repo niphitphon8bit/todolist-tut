@@ -6,7 +6,7 @@ export const Projects = ({ activeValue = null }) => {
     const { setSelectedProject } = useSelectedProjectValue();
     const { projects } = useProjectsValue();
 
-     return (
+    return (
         projects &&
         projects.map(project => (
             <li
@@ -18,16 +18,22 @@ export const Projects = ({ activeValue = null }) => {
                         ? 'active sidebar__project'
                         : 'sidebar__project'
                 }
-                onKeyDown={() => {
-                    setActive(project.projectId);
-                    setSelectedProject(project.projectId);
-                }}
-                onClick={() => {
-                    setActive(project.projectId);
-                    setSelectedProject(project.projectId);
-                }}
             >
-                <IndividualProject project={project} />
+                <div
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Select ${project.name} as the task project`}
+                    onKeyDown={() => {
+                        setActive(project.projectId);
+                        setSelectedProject(project.projectId);
+                    }}
+                    onClick={() => {
+                        setActive(project.projectId);
+                        setSelectedProject(project.projectId);
+                    }}
+                >
+                    <IndividualProject project={project} />
+                </div>
             </li>
         ))
     )
