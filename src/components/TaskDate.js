@@ -13,6 +13,7 @@ export const TaskDate = (
         <ul className="task-date__list">
             <li
                 data-testid="task-date-overlay"
+                aria-label="Select today as task date"
             >
                 <div
                     onClick={() => {
@@ -34,6 +35,7 @@ export const TaskDate = (
             </li>
             <li
                 data-testid="task-date-tomorrow"
+                aria-label="Select tomorrow as task date"
             >
                 <div
                     onClick={() => {
@@ -55,6 +57,7 @@ export const TaskDate = (
             </li>
             <li
                 data-testid="task-date-next-week"
+                aria-label="Select next week as task date"
             >
                 <div
                     onClick={() => {

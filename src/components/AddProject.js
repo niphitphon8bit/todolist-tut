@@ -34,6 +34,7 @@ export const AddProject = ({ shouldShow = false }) => {
                         value={projectName}
                         onChange={e => setProjectName(e.target.value)}
                         className="add-project__name"
+                        aria-label="Add project name"
                         data-testid="project-name"
                         type="text"
                         placeholder="Name your project" />
@@ -41,11 +42,13 @@ export const AddProject = ({ shouldShow = false }) => {
                         className="add-project__submit"
                         type="button"
                         onClick={() => addProject()}
+                        aria-label="Submit Project"
                         data-testid="add-project-submit"
                     >
                         Add Project
                     </button>
                     <span
+                        aria-label="Cancel adding project"
                         data-testid="hide-project-overlay"
                         className="add-project__cancel"
                         onClick={() => setShow(false)}
@@ -59,6 +62,7 @@ export const AddProject = ({ shouldShow = false }) => {
             )}
             <span className="add-project__plus">+</span>
             <span
+                aria-label="Add Project"
                 data-testid="add-project-action"
                 className="add-project__text"
                 onClick={() => setShow(!show)}

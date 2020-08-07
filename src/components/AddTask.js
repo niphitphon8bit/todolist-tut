@@ -57,7 +57,7 @@ export const AddTask = ({
 
     return (
         <div
-            className={showQuickAddTask ? 'add-task' : 'add-task'}
+            className={showQuickAddTask ? 'add-task add-task__overlay' : 'add-task'}
             data-testid="add-task-comp"
         >
             {showAddTaskMain && (
@@ -79,7 +79,7 @@ export const AddTask = ({
                 <div className="add-task__main"
                     data-testid="add-task-main"
                     aria-label="Quick add task"
-                    >
+                >
                     {showQuickAddTask && (
                         <>
                             <div data-testid="quick-add-task">
@@ -142,6 +142,7 @@ export const AddTask = ({
                         <span
                             className="add-task__cancel"
                             data-testid="add-task-main-cancel"
+                            aria-label="Cancel Adding Task"
                             onClick={() => {
                                 setshowMain(false);
                                 setShowProjectOverlay(false);
@@ -157,6 +158,7 @@ export const AddTask = ({
                         </span>
                     )}
                     <span
+                        aria-label="add task project"
                         className="add-task__project"
                         data-testid="show-project-overlay"
                         onClick={() => setShowProjectOverlay(!showProjectOverlay)}
@@ -167,6 +169,7 @@ export const AddTask = ({
                         <FaRegListAlt />
                     </span>
                     <span
+                        aria-label="Add task date"
                         className="add-task__date"
                         data-testid="show-task-date-overlay"
                         onClick={() => setShowTaskDate(!showTaskDate)}

@@ -13,7 +13,9 @@ export const Checkbox = ({ id }) => {
     };
 
     return (
-        <div className="checkbox-holder"
+        <div
+            aria-label="Checking Task"
+            className="checkbox-holder"
             data-testid="checkbox-action"
             onClick={() => archiveTask()}
             onKeyDown={() => archiveTask()}
